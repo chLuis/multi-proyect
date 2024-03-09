@@ -8,7 +8,6 @@ export default function DragAndDropPage() {
     const [hoverTrash, setHoverTrash] = useState("bg-red-600");
     const [addItem, setAddItem] = useState(false)
     const [count, setCount] = useState(0);
-    const [deleteOption, setDeleteOption] = useState(false)
 
     useEffect(() => {
         let total = 0;
@@ -85,9 +84,9 @@ export default function DragAndDropPage() {
     function handleDeleteInList(e, index){
         e.stopPropagation();
         e.preventDefault();
-        console.log("BORRAR");
+        //console.log("BORRAR");
         //const index = Number(e.dataTransfer.getData("index"));
-        console.log(index);
+        //console.log(index);
         //const data = e.dataTransfer.getData("contenidoLista")
         //const precio = Number(e.dataTransfer.getData("precioLista"))
         let newLandingZone = landingZone;
@@ -95,7 +94,7 @@ export default function DragAndDropPage() {
         setLandingZone([...newLandingZone]);
        // setHoverTrash("bg-red-600");
         //setShowTrash(false);
-        setDeleteOption(!deleteOption)
+        //setDeleteOption(!deleteOption)
     }
 
     function handleOverAll(e) {
@@ -149,13 +148,12 @@ export default function DragAndDropPage() {
                                     draggable
                                     onDragStart={(e) => handleOnDragList(e)}
                                     onDragEnd={handleEndAll}
-                                    onClick={() => setDeleteOption(!deleteOption)}
                                     value={index}
                                     className="flex justify-center flex-nowrap  gap-2"
                                 >
                                     {item.name} - {item.price}
                                 </option>
-                                <div className="w-6">{deleteOption && <div className="flex justify-center items-center" onClick={(e) => handleDeleteInList(e, index)}><svg
+                                <div className="flex justify-center items-center" onClick={(e) => handleDeleteInList(e, index)}><svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="icon icon-tabler icon-tabler-trash"
                                     width="20"
@@ -177,8 +175,7 @@ export default function DragAndDropPage() {
                                     <path d="M14 11l0 6" />
                                     <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
                                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                                </svg></div>}
-                                </div>
+                                </svg></div>
                                 </div>
                             ))}
                         </div>
