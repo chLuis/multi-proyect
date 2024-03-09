@@ -16,9 +16,10 @@ export default function DragAndDropPage() {
         setCount(total);
     }, [landingZone]);
 
-    function handleOnDrag(e) {
+    function handleOnDrag(e, customValue) {
         console.log("AGARRAO");
-        //console.log(e.target.value)
+        console.log(e.target.value)
+        console.log(customValue)
         e.dataTransfer.setData("contenido", e.target.innerText);
         e.dataTransfer.setData("precio", e.target.value);
     }
@@ -123,7 +124,7 @@ export default function DragAndDropPage() {
                             className={`min-w-full min-h-60 z-10 ${hoverDrag}`}
                         >
                             {landingZone.map((item, index) => (
-                                <option
+                                <div
                                     draggable
                                     onDragStart={(e) => handleOnDragList(e)}
                                     onDragEnd={handleEndAll}
@@ -134,7 +135,7 @@ export default function DragAndDropPage() {
                                     className="hover:bg-slate-900 duration-200"
                                 >
                                     {item.name} - {item.price}
-                                </option>
+                                </div>
                             ))}
                         </div>
 
@@ -181,8 +182,8 @@ export default function DragAndDropPage() {
                     <h4>Elementos</h4>
                     <div className="flex flex-row flex-wrap gap-1 justify-center items-center hover:bg-neutral-800 p-4">
                         {SET_ELEMENT.map((item, index) => (
-                            <option
-                                value={item.price}
+                            <div
+                                data={item.price}
                                 key={index}
                                 draggable
                                 onDragStart={(e) => handleOnDrag(e)}
@@ -192,7 +193,7 @@ export default function DragAndDropPage() {
                                 className="w-28 border rounded p-2 hover:bg-slate-400 cursor-grab active:cursor-grabbing select-none duration-200"
                             >
                                 {item.name}
-                            </option>
+                            </div>
                         ))}
                     </div>
                 </div>
