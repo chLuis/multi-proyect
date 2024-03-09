@@ -87,12 +87,41 @@ export default function DragAndDropPage() {
         setHoverTrash("bg-red-600");
         console.log("VOLANDO GRANDE");
     }
+    function handleTouchStart(e) {
+        console.log("TOUCH START");
+        e.target.dataset.touchStartX = e.changedTouches[0].clientX;
+        e.target.dataset.touchStartY = e.changedTouches[0].clientY;
+    }
+
+    function handleTouchMove(e) {
+        console.log("TOUCH MOVE");
+        const touchStartX = e.target.dataset.touchStartX;
+        const touchStartY = e.target.dataset.touchStartY;
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        // Aquí puedes añadir la lógica para mover el elemento en función de diffX y diffY
+        // Actualiza la posición del elemento en función de diffX y diffY
+    e.target.style.left = `${e.target.offsetLeft + diffX}px`;
+    e.target.style.top = `${e.target.offsetTop + diffY}px`;
+
+    // Actualiza touchStartX y touchStartY para el próximo movimiento
+    e.target.dataset.touchStartX = touchEndX;
+    e.target.dataset.touchStartY = touchEndY;
+    }
+
+    function handleTouchEnd() {
+        console.log("TOUCH END");
+        alert("Solataste el elemento")
+        // Aquí puedes añadir la lógica para finalizar el movimiento del elemento
+    }
 
     return (
         //<div className="mx-4" onDrop={handleOverAll}>
         <div
             onDragOver={handleOverAll}
-            onTouchMove={handleOverAll}
+            onTouchMove={handleTouchMove}
             className="mx-4 animate-pulse-veryshort"
         >
             <header className="flex flex-col justify-center items-center mt-10 mb-10">
@@ -119,8 +148,8 @@ export default function DragAndDropPage() {
                         <div
                             onDrop={handleOnDrop}
                             onDragOver={handleDragOver}
-                            onTouchEnd={handleOnDrop}
-                            onTouchMove={handleDragOver}
+                            onTouchEnd={handleTouchEnd}
+                            onTouchMove={handleTouchMove}
                             className={`min-w-full min-h-60 z-10 ${hoverDrag}`}
                         >
                             {landingZone.map((item, index) => (
@@ -128,8 +157,8 @@ export default function DragAndDropPage() {
                                     draggable
                                     onDragStart={(e) => handleOnDragList(e)}
                                     onDragEnd={handleEndAll}
-                                    onTouchStart={(e) => handleOnDragList(e)}
-                                    onTouchEnd={handleEndAll}
+                                    onTouchStart={(e) => handleTouchStart(e)}
+                                    onTouchEnd={handleTouchEnd}
                                     key={index}
                                     value={index}
                                     className="hover:bg-slate-900 duration-200"
@@ -146,8 +175,8 @@ export default function DragAndDropPage() {
                             <div
                                 onDragOver={handleOverTrash}
                                 onDrop={handleTrash}
-                                onTouchMove={handleOverTrash}
-                                onTouchEnd={handleTrash}
+                                onTouchMove={handleTouchMove}
+                                onTouchEnd={handleTouchEnd}
                                 className={`${hoverTrash} min-h-14 w-full flex justify-center items-center rounded duration-200 animate-width`}
                             >
                                 <svg
@@ -188,8 +217,8 @@ export default function DragAndDropPage() {
                                 draggable
                                 onDragStart={(e) => handleOnDrag(e)}
                                 onDragEnd={handleOverAll}
-                                onTouchStart={(e) => handleOnDrag(e)}
-                                onTouchEnd={handleOverAll}
+                                onTouchStart={(e) => handleTouchStart(e)}
+                                onTouchEnd={(e) => handleTouchEnd(e)}
                                 className="w-28 border rounded p-2 hover:bg-slate-400 cursor-grab active:cursor-grabbing select-none duration-200"
                             >
                                 {item.name}
