@@ -22,10 +22,12 @@ export default function ListProyects() {
     return (
         <ul className="w-60">
             {LIST_PROYECTS.map(({name, link}, index) => 
-                <li key={index} className="my-3 rounded border p-2 text-center hover:bg-slate-900 duration-200">
-                <a href={`/${link}`}>{name}</a>
-                </li>)}
-                
+                <a key={index} href={`/${link}`}>
+                    <li  className="my-3 rounded border p-2 text-center hover:bg-slate-900 hover:font-semibold duration-200">
+                        {name}
+                    </li>
+                </a>
+            )}
         </ul>
     );
 }

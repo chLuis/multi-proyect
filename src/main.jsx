@@ -8,12 +8,13 @@ import TodoPage from './routes/todo-list.jsx';
 import CreatePostPage from './routes/create-post.jsx';
 import FetchApiPage from './routes/fetch-api.jsx';
 import ErrorPage from './components/Error404.jsx';
+import ToPortfolio from './components/ToPorfolio.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />
+    element: (<App />),
+    errorElement: <ErrorPage />,
   },
   {
     path: '/drag-drop',
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <App /> */}
+    <ToPortfolio />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
