@@ -91,6 +91,8 @@ export default function DragAndDropPage() {
         console.log("TOUCH START");
         e.target.dataset.touchStartX = e.changedTouches[0].clientX;
         e.target.dataset.touchStartY = e.changedTouches[0].clientY;
+        e.dataTransfer.setData("contenido", e.target.innerText);
+        e.dataTransfer.setData("precio", e.target.value);
     }
 
     function handleTouchMove(e) {
@@ -111,8 +113,14 @@ export default function DragAndDropPage() {
     e.target.dataset.touchStartY = touchEndY;
     }
 
-    function handleTouchEnd() {
+    function handleTouchEnd(e) {
         console.log("TOUCH END");
+        setHoverDrag("bg-neutral-800");
+        if (e.dataTransfer.getData("contenido")) {
+            const data = e.dataTransfer.getData("contenido");
+            const precio = Number(e.dataTransfer.getData("precio"));
+            setLandingZone([...landingZone, { name: data, price: precio }]);
+        }
         alert("Solataste el elemento")
         // Aquí puedes añadir la lógica para finalizar el movimiento del elemento
     }
@@ -143,12 +151,12 @@ export default function DragAndDropPage() {
                         onTouchMove={(e) => e.stopPropagation()}
                         className="w-full min-h-60 border rounded bg-blue-600"
                     >
-                        <h4 className="min-h-6">Zona de landing</h4>
+                        <h4 className="min-h-6">Zona de landing2</h4>
 
                         <div
                             onDrop={handleOnDrop}
                             onDragOver={handleDragOver}
-                            onTouchEnd={handleTouchEnd}
+                            onTouchEnd={(e) => handleTouchEnd(e)}
                             onTouchMove={handleTouchMove}
                             className={`min-w-full min-h-60 z-10 ${hoverDrag}`}
                         >
@@ -158,7 +166,7 @@ export default function DragAndDropPage() {
                                     onDragStart={(e) => handleOnDragList(e)}
                                     onDragEnd={handleEndAll}
                                     onTouchStart={(e) => handleTouchStart(e)}
-                                    onTouchEnd={handleTouchEnd}
+                                    onTouchEnd={(e) => handleTouchEnd(e)}
                                     key={index}
                                     value={index}
                                     className="hover:bg-slate-900 duration-200"
