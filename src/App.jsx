@@ -1,4 +1,4 @@
-import ListProyects from "../components/ListProyects"
+import ListProyects from "./components/ListProyects"
 
 function App() {
 
