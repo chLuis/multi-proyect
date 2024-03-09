@@ -20,7 +20,8 @@ export default function ListProyects() {
     ]
 
     return (
-        <ul className="w-60">
+        <div className="flex justify-center w-60 animate-pulse-veryshort">
+        <ul className="w-full animate-width overflow-hidden text-ellipsis text-nowrap">
             {LIST_PROYECTS.map(({name, link}, index) => 
                 <a key={index} href={`/${link}`}>
                     <li  className="my-3 rounded border p-2 text-center hover:bg-slate-900 hover:font-semibold duration-200">
@@ -28,6 +29,6 @@ export default function ListProyects() {
                     </li>
                 </a>
             )}
-        </ul>
+        </ul></div>
     );
 }
