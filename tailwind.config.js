@@ -12,12 +12,19 @@ export default {
       animation: {
         'pulse-short' : 'fade 0.5s ease-in-out',
         'pulse-veryshort' : 'fade 0.25s ease-in-out',
+        'pulse-shortout' : 'disappear 0.9s ease-in-out',
         'width' : 'widthshow 0.3s ease-in-out'
       },
       keyframes: {
         fade: {
           '0%' : { opacity: 0 },
           '100%' : { opacity: 1 }
+        },
+        disappear: {
+          '0%' : { opacity: 0 },
+          '20%' : { opacity: 1},
+          '60%' : { opacity: 1},
+          '100%' : { opacity: 0 }
         },
         widthshow: {
           '0%' : { width: '0%', opacity: 0 },

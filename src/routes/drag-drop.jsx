@@ -6,7 +6,9 @@ export default function DragAndDropPage() {
     const [hoverDrag, setHoverDrag] = useState("bg-neutral-800");
     const [showTrash, setShowTrash] = useState(false);
     const [hoverTrash, setHoverTrash] = useState("bg-red-600");
+    const [addItem, setAddItem] = useState(false)
     const [count, setCount] = useState(0);
+    const [deleteOption, setDeleteOption] = useState(false)
 
     useEffect(() => {
         let total = 0;
@@ -16,10 +18,8 @@ export default function DragAndDropPage() {
         setCount(total);
     }, [landingZone]);
 
-    function handleOnDrag(e, customValue) {
+    function handleOnDrag(e) {
         console.log("AGARRAO");
-        console.log(e.target.value)
-        console.log(customValue)
         e.dataTransfer.setData("contenido", e.target.innerText);
         e.dataTransfer.setData("precio", e.target.value);
     }
@@ -40,6 +40,7 @@ export default function DragAndDropPage() {
             const data = e.dataTransfer.getData("contenido");
             const precio = Number(e.dataTransfer.getData("precio"));
             setLandingZone([...landingZone, { name: data, price: precio }]);
+            setAddItem(true)
         }
     }
 
@@ -81,56 +82,43 @@ export default function DragAndDropPage() {
         setShowTrash(false);
     }
 
+    function handleDeleteInList(e, index){
+        e.stopPropagation();
+        e.preventDefault();
+        console.log("BORRAR");
+        //const index = Number(e.dataTransfer.getData("index"));
+        console.log(index);
+        //const data = e.dataTransfer.getData("contenidoLista")
+        //const precio = Number(e.dataTransfer.getData("precioLista"))
+        let newLandingZone = landingZone;
+        newLandingZone.splice(index, 1);
+        setLandingZone([...newLandingZone]);
+       // setHoverTrash("bg-red-600");
+        //setShowTrash(false);
+        setDeleteOption(!deleteOption)
+    }
+
     function handleOverAll(e) {
         e.preventDefault();
         setHoverDrag("bg-neutral-800");
         setHoverTrash("bg-red-600");
         console.log("VOLANDO GRANDE");
     }
-    function handleTouchStart(e) {
-        console.log("TOUCH START");
-        e.target.dataset.touchStartX = e.changedTouches[0].clientX;
-        e.target.dataset.touchStartY = e.changedTouches[0].clientY;
-        e.dataTransfer.setData("contenido", e.target.innerText);
-        e.dataTransfer.setData("precio", e.target.value);
-    }
-
-    function handleTouchMove(e) {
-        console.log("TOUCH MOVE");
-        const touchStartX = e.target.dataset.touchStartX;
-        const touchStartY = e.target.dataset.touchStartY;
-        const touchEndX = e.changedTouches[0].clientX;
-        const touchEndY = e.changedTouches[0].clientY;
-        const diffX = touchEndX - touchStartX;
-        const diffY = touchEndY - touchStartY;
-        // Aquí puedes añadir la lógica para mover el elemento en función de diffX y diffY
-        // Actualiza la posición del elemento en función de diffX y diffY
-    e.target.style.left = `${e.target.offsetLeft + diffX}px`;
-    e.target.style.top = `${e.target.offsetTop + diffY}px`;
-
-    // Actualiza touchStartX y touchStartY para el próximo movimiento
-    e.target.dataset.touchStartX = touchEndX;
-    e.target.dataset.touchStartY = touchEndY;
-    }
-
-    function handleTouchEnd(e) {
-        console.log("TOUCH END");
-        setHoverDrag("bg-neutral-800");
-        if (e.dataTransfer.getData("contenido")) {
-            const data = e.dataTransfer.getData("contenido");
-            const precio = Number(e.dataTransfer.getData("precio"));
-            setLandingZone([...landingZone, { name: data, price: precio }]);
-        }
-        alert("Solataste el elemento")
-        // Aquí puedes añadir la lógica para finalizar el movimiento del elemento
+    function handleClick(e) {
+        const precio = Number(e.target.value);
+        const data = e.target.innerText;
+        setLandingZone([...landingZone, { name: data, price: precio }])
+        setAddItem(true)
+        setTimeout(() => {
+            setAddItem(false)
+        }, 900)
     }
 
     return (
         //<div className="mx-4" onDrop={handleOverAll}>
         <div
             onDragOver={handleOverAll}
-            onTouchMove={handleTouchMove}
-            className="mx-4 animate-pulse-veryshort"
+            className="mx-6 animate-pulse-veryshort"
         >
             <header className="flex flex-col justify-center items-center mt-10 mb-10">
                 <h1 className="text-2xl font-extrabold">Drag and Drop</h1>
@@ -141,50 +129,67 @@ export default function DragAndDropPage() {
                     Back to home
                 </a>
             </header>
-
+            {addItem && <div className="fixed top-10 left-6 px-4 py-2 border rounded bg-black animate-pulse-shortout opacity-0"> Agregado </div>}
             <section className="flex flex-col md:flex-row gap-2 justify-center w-full text-center select-none">
-                <div>
+                <div className="w-full">
                     <div
                         onDrop={(e) => e.stopPropagation()}
                         onDragOver={(e) => e.stopPropagation()}
-                        onTouchEnd={(e) => e.stopPropagation()}
-                        onTouchMove={(e) => e.stopPropagation()}
                         className="w-full min-h-60 border rounded bg-blue-600"
                     >
-                        <h4 className="min-h-6">Zona de landing2</h4>
+                        <h4 className="min-h-6">Zona de landing</h4>
 
                         <div
                             onDrop={handleOnDrop}
                             onDragOver={handleDragOver}
-                            onTouchEnd={(e) => handleTouchEnd(e)}
-                            onTouchMove={handleTouchMove}
-                            className={`min-w-full min-h-60 z-10 ${hoverDrag}`}
+                            className={`flex flex-col gap-1 min-w-full min-h-60 z-10 ${hoverDrag}`}
                         >
                             {landingZone.map((item, index) => (
-                                <div
+                                <div className="flex flex-nowrap justify-center gap-2 hover:bg-slate-900 duration-200" key={index}><option
                                     draggable
                                     onDragStart={(e) => handleOnDragList(e)}
                                     onDragEnd={handleEndAll}
-                                    onTouchStart={(e) => handleTouchStart(e)}
-                                    onTouchEnd={(e) => handleTouchEnd(e)}
-                                    key={index}
+                                    onClick={() => setDeleteOption(!deleteOption)}
                                     value={index}
-                                    className="hover:bg-slate-900 duration-200"
+                                    className="flex justify-center flex-nowrap  gap-2"
                                 >
                                     {item.name} - {item.price}
+                                </option>
+                                <div className="w-6">{deleteOption && <div className="flex justify-center items-center" onClick={(e) => handleDeleteInList(e, index)}><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="icon icon-tabler icon-tabler-trash"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path
+                                        stroke="none"
+                                        d="M0 0h24v24H0z"
+                                        fill="none"
+                                    />
+                                    <path d="M4 7l16 0" />
+                                    <path d="M10 11l0 6" />
+                                    <path d="M14 11l0 6" />
+                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                </svg></div>}
+                                </div>
                                 </div>
                             ))}
                         </div>
-
-                        <div>Total: {count}</div>
+                        <div>{landingZone?.length >= 1 ? `Cantidad: ${landingZone?.length}` : null}</div>
+                        <div className="uppercase font-semibold">Total: {count}</div>
                     </div>
                     <div className="min-h-14 flex justify-center items-center w-full">
                         {showTrash && (
                             <div
                                 onDragOver={handleOverTrash}
                                 onDrop={handleTrash}
-                                onTouchMove={handleTouchMove}
-                                onTouchEnd={handleTouchEnd}
                                 className={`${hoverTrash} min-h-14 w-full flex justify-center items-center rounded duration-200 animate-width`}
                             >
                                 <svg
@@ -217,20 +222,19 @@ export default function DragAndDropPage() {
 
                 <div className="w-full">
                     <h4>Elementos</h4>
-                    <div className="flex flex-row flex-wrap gap-1 justify-center items-center hover:bg-neutral-800 p-4">
+                    <div className="flex flex-row flex-wrap gap-2 justify-center items-center hover:bg-neutral-800 p-4">
                         {SET_ELEMENT.map((item, index) => (
-                            <div
-                                data={item.price}
+                            <option
+                                value={item.price}
                                 key={index}
                                 draggable
                                 onDragStart={(e) => handleOnDrag(e)}
                                 onDragEnd={handleOverAll}
-                                onTouchStart={(e) => handleTouchStart(e)}
-                                onTouchEnd={(e) => handleTouchEnd(e)}
-                                className="w-28 border rounded p-2 hover:bg-slate-400 cursor-grab active:cursor-grabbing select-none duration-200"
+                                onClick={handleClick}
+                                className="w-28 overflow-clip text-nowrap text-ellipsis border rounded p-2 hover:bg-slate-400 cursor-grab active:cursor-grabbing select-none duration-200"
                             >
                                 {item.name}
-                            </div>
+                            </option>
                         ))}
                     </div>
                 </div>
