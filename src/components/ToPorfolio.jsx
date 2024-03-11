@@ -1,6 +1,6 @@
 export default function ToPortfolio() {
     return(
-        <div className="fixed top-0 py-1 bg-black">
+        <div className="fixed top-0 py-1 bg-black z-40">
         <div className="flex justify-end text-end w-screen">
             <a href="https://chluis-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="flex w-fit me-4 justify-end gap-1 text-neutral-400 hover:text-neutral-50 border-b-2 ps-32 border-b-transparent hover:border-b-white hover:ps-0 duration-200">
                 <span>my Porfolio</span>

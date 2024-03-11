@@ -1,6 +1,6 @@
 export default function TitleProyect({title}){
     return(
-        <header className="flex flex-col justify-center items-center mt-10 mb-10">
+        <header className="flex flex-col justify-center items-center mt-10 mb-6">
                 <h1 className="text-2xl font-extrabold">{title}</h1>
                 <a
                     href="/"
