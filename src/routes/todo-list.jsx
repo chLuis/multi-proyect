@@ -6,6 +6,8 @@ import ToDo from "../components/ToDo";
 
 export default function TodoPage() {
 
+    const [preloadTodoList, setPreloadTodoList] = useState([])
+
     const INITIAL_TODO = [
         {
             id: 1710901108180,
@@ -24,7 +26,6 @@ export default function TodoPage() {
         }
     ]
 
-    const [preloadTodoList, setPreloadTodoList] = useState([])
 
 
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function TodoPage() {
             setPreloadTodoList(INITIAL_TODO)
         }
     } , [])
-
+    
     //console.log(JSON.parse(localStorage.getItem("todoList")))
     return (
         <div className="flex flex-col justify-center items-center">

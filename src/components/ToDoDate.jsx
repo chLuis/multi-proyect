@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function DateToDo({date}) {
+export default function ToDoDate({date}) {
 
     const MONTHS = [
         'Enero',
@@ -46,9 +46,9 @@ useEffect(() => {
 },[]) 
 //console.log(dia)
     return (
-        <div className="relative text-xs flex flex-col border px-2 pt-4 pb-1 w-16 max-w-16 h-20 max-h-20 text-center">
-                <span className="absolute top-1 left-2 w-2 h-2  border rounded-full"></span>
-                <span className="absolute top-1 right-2 w-2 h-2  border rounded-full"></span>
+        <div className="relative text-[10px] flex flex-col border px-1 pt-4 pb-1 w-16 min-w-16 max-w-16 h-20 max-h-20 text-center bg-red-100 text-neutral-900">
+                <span className="absolute top-1 left-2 w-2 h-2 bg-neutral-700 border border-black rounded-full"></span>
+                <span className="absolute top-1 right-2 w-2 h-2 bg-neutral-700 border border-black rounded-full"></span>
             <h2 className="uppercase font-semibold overflow-clip text-ellipsis">{MONTHS[Number(mes)]}</h2>
             <h2 className="text-sm font-extrabold">{dia}</h2>
             <p>{hora}:{minuto}</p>

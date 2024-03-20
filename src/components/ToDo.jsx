@@ -1,5 +1,5 @@
-import { useState } from "react";
-import ListToDo from "./ListToDo";
+import { useEffect, useState } from "react";
+import ToDoList from "./ToDoList";
 
 export default function ToDo({dataLoad}) {
     const [newTask, setNewTask] = useState('')
@@ -8,11 +8,14 @@ export default function ToDo({dataLoad}) {
     function handleToDo(e) {
         setNewTask(e.target.value)
     }
-
+    useEffect(() => {
+        setAllTask(dataLoad)
+    }, [dataLoad])
+    
     function addNewTask(){
         if(newTask === '') return alert("Ingresar text");
         const todoStorage = JSON.parse(localStorage.getItem('todoList'))
-        //console.log(todoStorage)
+        console.log(todoStorage)
         const newTodo = {
             id: new Date().getTime(),
             text: newTask,
@@ -21,7 +24,6 @@ export default function ToDo({dataLoad}) {
         todoStorage.push(newTodo)
         setAllTask(todoStorage)
         localStorage.setItem('todoList', JSON.stringify(todoStorage))
-
     }
 
     return (
@@ -35,7 +37,7 @@ export default function ToDo({dataLoad}) {
                     +
                 </button>
             </label>
-            <ListToDo data={allTask} />
+            <ToDoList data={allTask} />
         </div>
     );
 }
