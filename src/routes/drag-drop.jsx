@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { SET_ELEMENT } from "../../lib/list";
 import TrashItem from "../components/TrashItem";
 import TitleProyect from '../components/TitleProyect.jsx'
+import Background from "../components/Background.jsx";
 
 export default function DragAndDropPage() {
     const [landingZone, setLandingZone] = useState([]);
@@ -150,6 +151,7 @@ export default function DragAndDropPage() {
             onDrop={handleDropALL}
             className="mx-6 animate-pulse-veryshort"
         >
+            <Background />
             <TitleProyect title={"Drag and Drop"} />
             {addItem && <div className="fixed top-10 left-6 px-4 py-2 border border-green-500 rounded bg-green-950 animate-pulse-shortout opacity-0"> Agregado </div>}
             {deleteItem && <div className="fixed top-10 left-6 px-4 py-2 border border-red-500 rounded bg-red-950 animate-pulse-shortout opacity-0"> Eliminado </div>}
@@ -157,7 +159,7 @@ export default function DragAndDropPage() {
 
                 <div className="w-full">
                     <h4 className="font-extrabold text-xl uppercase">Elementos</h4>
-                    <div className="flex flex-row flex-wrap gap-2 justify-center items-center hover:bg-neutral-800 p-4">
+                    <div className="flex flex-row flex-wrap gap-2 justify-center items-center p-4">
                         {SET_ELEMENT.map((item, index) => (
                             <option
                                 value={item.price}
@@ -166,7 +168,7 @@ export default function DragAndDropPage() {
                                 onDragStart={(e) => handleOnDrag(e)}
                                 onDragEnd={handleOverAll}
                                 onClick={handleClick}
-                                className="w-28 overflow-clip text-nowrap text-ellipsis border rounded p-2 hover:bg-slate-400 cursor-grab active:cursor-grabbing select-none duration-200"
+                                className="w-28 overflow-clip text-nowrap text-ellipsis border rounded p-2 bg-slate-900 bg-opacity-50 hover:bg-slate-500 cursor-grab active:cursor-grabbing select-none duration-200"
                             >
                                 {item.name}
                             </option>

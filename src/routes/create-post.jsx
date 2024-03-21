@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TitleProyect from "../components/TitleProyect";
+import Background from "../components/Background";
 
 export default function CreatePostPage() {
 
@@ -96,6 +97,7 @@ export default function CreatePostPage() {
 
     return (
         <div className="flex flex-col items-center animate-pulse-veryshort">
+            <Background />
             <TitleProyect title={"Create Post"} />
             <div className="z-50 fixed flex flex-col gap-3 top-6 left-2 text-lg">
                 {alertCategory && <div className="z-50 border rounded px-3 py-1 bg-red-900 border-red-600">{problemCategory}</div>}
