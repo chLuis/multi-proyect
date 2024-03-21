@@ -13,7 +13,8 @@ export default {
         'pulse-short' : 'fade 0.5s ease-in-out',
         'pulse-veryshort' : 'fade 0.25s ease-in-out',
         'pulse-shortout' : 'disappear 0.9s ease-in-out',
-        'width' : 'widthshow 0.3s ease-in-out'
+        'width' : 'widthshow 0.3s ease-in-out',
+        'spin-long': 'spinner 10s linear'
       },
       keyframes: {
         fade: {
@@ -29,7 +30,11 @@ export default {
         widthshow: {
           '0%' : { width: '0%', opacity: 0 },
           '100%' : { width: '100%', opacity: 1 }
-        } ,
+        },
+        spinner: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        }
       }
     },
   },

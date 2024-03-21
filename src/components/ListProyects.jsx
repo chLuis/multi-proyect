@@ -24,8 +24,9 @@ export default function ListProyects() {
         <ul className="w-full animate-width overflow-hidden text-ellipsis text-nowrap">
             {LIST_PROYECTS.map(({name, link}, index) => 
                 <a key={index} href={`/${link}`}>
-                    <li  className="my-3 rounded border p-2 text-center hover:bg-slate-900 hover:font-semibold duration-200">
-                        {name}
+                    <li  className="relative my-3 rounded border p-2 text-center hover:bg-slate-900 hover:font-semibold duration-200">
+                        <span>{name}</span>
+                        <div className="absolute inset-0 bg-white bg-opacity-35 blur-sm"></div>
                     </li>
                 </a>
             )}

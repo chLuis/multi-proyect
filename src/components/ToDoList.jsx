@@ -96,6 +96,7 @@ export default function ToDoList({data}) {
         <div className="mt-10 flex flex-col mx-auto gap-4 min-w-0 w-fit max-w-[680px]">
             {list?.sort((a, b) => a.completed - b.completed || b.id - a.id).map((item, index) => (
                     <label name={index+"todo"} key={index} className={`flex ${item.completed ? "bg-neutral-700" : ""} relative hover:bg-neutral-600 select-none items-center w-fit ps-2 pe-1 py-2 gap-2 min-w-0 max-w-[500px] border hover:shadow-none shadow-white shadow-sm hover:shadow-neutral-200 rounded duration-200 animate-pulse-short`}>
+                    <div className="absolute inset-0 bg-black bg-opacity-45 blur-sm"></div>
                     {!item.completed 
                         ? <span className="absolute font-light text-xs top-0 right-0 h-6 w-fit pe-1 text-neutral-400 text-nowrap">to do:</span>
                         : <span className="absolute font-light text-xs top-0 right-0 h-6 w-fit pe-1 text-neutral-400 text-nowrap">done!</span>}
