@@ -14,7 +14,7 @@ export default function ListProyects() {
             link: "create-post"
         },
         {
-            name: "Fetch API",
+            name: "API",
             link: "fetch-api"
         }
     ]

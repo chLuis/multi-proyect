@@ -6,7 +6,7 @@ export default function FetchApiPage() {
     return (
         <>
         <Background />
-        <TitleProyect title={"Fetch API"} />
+        <TitleProyect title={"API"} />
         <FetchWeather />
         </>
 
