@@ -14,7 +14,7 @@ export default {
         'pulse-veryshort' : 'fade 0.25s ease-in-out',
         'pulse-shortout' : 'disappear 0.9s ease-in-out',
         'width' : 'widthshow 0.3s ease-in-out',
-        'spin-long': 'spinner 10s linear'
+        'spin-long': 'spinner 10s linear infinite'
       },
       keyframes: {
         fade: {
