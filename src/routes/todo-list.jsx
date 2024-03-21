@@ -27,13 +27,10 @@ export default function TodoPage() {
         }
     ]
 
-console.log(preloadTodoList)
-
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem("todoList")) || []
         //console.log(data)
         if(data && data.length > 0) {
-            console.log("if")
             setPreloadTodoList(data)
             setAfterLoadList(data)
         } else {

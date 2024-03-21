@@ -5,6 +5,7 @@ export default function ToDo({dataLoad}) {
     const [newTask, setNewTask] = useState('')
     const [allTask, setAllTask] = useState(dataLoad)
     const [taskCreated, setTaskCreated] = useState(false)
+    const [insertText, setInsertText] = useState("bg-orange-400")
     
     function handleToDo(e) {
         setNewTask(e.target.value)
@@ -14,7 +15,14 @@ export default function ToDo({dataLoad}) {
     }, [dataLoad])
     
     function addNewTask(){
-        if(newTask === '') return alert("Ingresar text");
+        if(newTask === '') {
+            setInsertText("animate-bounce bg-red-500")
+            setTimeout(() => {
+                setInsertText("bg-orange-400")
+            }, 1500)
+            return
+        }
+            
         const todoStorage = JSON.parse(localStorage.getItem('todoList'))
         console.log(todoStorage)
         const newTodo = {
@@ -26,9 +34,15 @@ export default function ToDo({dataLoad}) {
         setAllTask(todoStorage)
         localStorage.setItem('todoList', JSON.stringify(todoStorage))
         setTaskCreated(true)
+        setNewTask('')
         setTimeout(() => {
             setTaskCreated(false)
         }, 850)
+    }
+    function handleKeyDown(event){
+        if(event.key === 'Enter'){
+            addNewTask()
+        }
     }
 
     return (
@@ -37,8 +51,8 @@ export default function ToDo({dataLoad}) {
                 <span className="absolute -inset-y-1 border-b border-orange-400 h-6 left-2 w-11 text-neutral-500 text-nowrap">
                     to do:
                 </span>
-                <input type="text" onChange={(e) => handleToDo(e)} className="min-w-0 w-full py-2 ps-16 pe-12" />
-                <button type="button" onClick={addNewTask} className="absolute inset-y-0 right-2 px-2 flex items-center text-sm font-medium text-white bg-orange-400 border border-transparent rounded-r-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+                <input type="text" value={newTask} onChange={(e) => handleToDo(e)} onKeyDown={(e) => handleKeyDown(e)} className="min-w-0 w-full py-2 ps-16 pe-12" />
+                <button type="button" onClick={addNewTask}  className={`${insertText} duration-200 absolute font-extrabold inset-y-0 right-2 px-2 flex items-center justify-center text-xl text-white border border-transparent rounded-r-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 pb-1`}>
                     +
                 </button>
             </label>

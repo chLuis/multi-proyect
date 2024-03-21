@@ -12,7 +12,6 @@ export default function ToDoList({data}) {
 
     useEffect(() => {
         const dataSorted = data
-        console.log("TOLIST")
         setList(dataSorted)
     }, [data])
 
@@ -36,10 +35,10 @@ export default function ToDoList({data}) {
         //let fechaFormateada = año + '/' + mes + '/' + dia + ' ' + hora + ':' + minuto;
         return (
                 <>
-                    <div className="relative text-[10px] flex flex-col border px-1 pt-4 pb-1 w-16 min-w-16 max-w-16 h-20 max-h-20 text-center bg-red-100 text-neutral-900">
+                    <div className="relative text-[10px] flex shadow-md shadow-neutral-500 flex-col border px-1 pt-4 pb-1 w-16 min-w-16 max-w-16 h-20 max-h-20 text-center bg-red-100 text-neutral-900">
                         <span className="absolute top-1 left-2 w-2 h-2 bg-neutral-700 border border-black rounded-full"></span>
                         <span className="absolute top-1 right-2 w-2 h-2 bg-neutral-700 border border-black rounded-full"></span>
-                        <h2 className="uppercase font-semibold overflow-clip text-ellipsis">{MONTHS[Number(mes)]}</h2>
+                        <h2 className="uppercase bg-red-700 text-neutral-100 font-semibold overflow-clip text-ellipsis">{MONTHS[Number(mes)]}</h2>
                         <h2 className="text-sm font-extrabold">{dia}</h2>
                         <p>{hora}:{minuto}</p>
                     </div>
@@ -96,16 +95,19 @@ export default function ToDoList({data}) {
     return (
         <div className="mt-10 flex flex-col mx-auto gap-4 min-w-0 w-fit max-w-[680px]">
             {list?.sort((a, b) => a.completed - b.completed || b.id - a.id).map((item, index) => (
-                    <label name={index+"todo"} key={index} className={`flex ${item.completed ? "bg-neutral-700" : ""} hover:bg-neutral-600 select-none items-center w-fit px-3 py-2 gap-4 min-w-0 max-w-[500px] border hover:shadow-none shadow-white shadow-sm hover:shadow-neutral-200 duration-200 animate-pulse-short`}>
-                        {item.completed 
-                            ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => handleNotCompleted(item.id)} className={`fill-blue-700 duration-200 cursor-pointer`} height="32" viewBox="0 -960 960 960" width="32"><path d="m427.462-363.692 211.846-210.846L616-597.846 427.462-410.308l-85-84L319.154-471l108.308 107.308ZM480.134-136q-70.673 0-133.41-26.839-62.737-26.84-109.865-73.922-47.127-47.082-73.993-109.757Q136-409.194 136-479.866q0-71.673 26.839-133.91 26.84-62.237 73.922-109.365 47.082-47.127 109.757-73.993Q409.194-824 479.866-824q71.673 0 133.91 26.839 62.237 26.84 109.365 73.922 47.127 47.082 73.993 109.257Q824-551.806 824-480.134q0 70.673-26.839 133.41-26.84 62.737-73.922 109.865-47.082 47.127-109.257 73.993Q551.806-136 480.134-136ZM480-168q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>
-                            : <span onClick={() => handleCompleted(item.id)} className="w-6 h-6 fill-blue-200 mx-1 hover:border-blue-400 border hover:bg-blue-600 rounded-full duration-200 cursor-pointer"></span>}
+                    <label name={index+"todo"} key={index} className={`flex ${item.completed ? "bg-neutral-700" : ""} relative hover:bg-neutral-600 select-none items-center w-fit ps-2 pe-1 py-2 gap-2 min-w-0 max-w-[500px] border hover:shadow-none shadow-white shadow-sm hover:shadow-neutral-200 rounded duration-200 animate-pulse-short`}>
+                    {!item.completed 
+                        ? <span className="absolute font-light text-xs top-0 right-0 h-6 w-fit pe-1 text-neutral-400 text-nowrap">to do:</span>
+                        : <span className="absolute font-light text-xs top-0 right-0 h-6 w-fit pe-1 text-neutral-400 text-nowrap">done!</span>}
+                        {getDateString(item.id)}
                         <p className={`${item.completed ? "line-through text-wrap italic" : "text-wrap"}`}>{item.text}</p>
+                        {item.completed 
+                            ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => handleNotCompleted(item.id)} className={`fill-blue-700 min-h-8 min-w-8 duration-200 cursor-pointer`} height="32" viewBox="0 -960 960 960" width="32"><path d="m427.462-363.692 211.846-210.846L616-597.846 427.462-410.308l-85-84L319.154-471l108.308 107.308ZM480.134-136q-70.673 0-133.41-26.839-62.737-26.84-109.865-73.922-47.127-47.082-73.993-109.757Q136-409.194 136-479.866q0-71.673 26.839-133.91 26.84-62.237 73.922-109.365 47.082-47.127 109.757-73.993Q409.194-824 479.866-824q71.673 0 133.91 26.839 62.237 26.84 109.365 73.922 47.127 47.082 73.993 109.257Q824-551.806 824-480.134q0 70.673-26.839 133.41-26.84 62.737-73.922 109.865-47.082 47.127-109.257 73.993Q551.806-136 480.134-136ZM480-168q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>
+                            : <span onClick={() => handleCompleted(item.id)} className="min-w-6 min-h-6 fill-blue-200 mx-1 hover:border-blue-400 border hover:bg-blue-600 rounded-full duration-200 cursor-pointer"></span>}
                         {/* <ToDoDate date={item.id} /> */}
                         {item.completed 
-                            ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => handleModalDelete(item.id)} height="28" fill="white" className="border cursor-pointer rounded-full border-transparent hover:border-neutral-400 duration-200" viewBox="0 -960 960 960" width="28"><path d="M377.731-330.769 480.5-433.538l102.769 102.769 26.462-26.462L506.962-460l102.769-102.769-26.462-26.462L480.5-486.462 377.731-589.231l-26.462 26.462L454.038-460 351.269-357.231l26.462 26.462Zm-71.27 164.615q-25.937 0-43.738-17.8-17.8-17.801-17.8-43.56v-490.64h-39.385v-36.795h155.693v-29.667h238.154v29.539h155.692v36.923h-39.384v490.64q0 25.759-17.801 43.56-17.8 17.8-43.738 17.8H306.461Zm372.308-552H281.846v490.462q0 9.231 7.692 16.923 7.693 7.692 16.923 7.692h347.693q9.231 0 16.923-7.692 7.692-7.692 7.692-16.923v-490.462Zm-396.923 0v515.077-515.077Z"/></svg>
+                            ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => handleModalDelete(item.id)} height="28" fill="white" className="border-b border-t cursor-pointer min-h-7 min-w-7 rounded-full border-transparent hover:border-b-neutral-400 hover:border-t-red-400 duration-200" viewBox="0 -960 960 960" width="28"><path d="M377.731-330.769 480.5-433.538l102.769 102.769 26.462-26.462L506.962-460l102.769-102.769-26.462-26.462L480.5-486.462 377.731-589.231l-26.462 26.462L454.038-460 351.269-357.231l26.462 26.462Zm-71.27 164.615q-25.937 0-43.738-17.8-17.8-17.801-17.8-43.56v-490.64h-39.385v-36.795h155.693v-29.667h238.154v29.539h155.692v36.923h-39.384v490.64q0 25.759-17.801 43.56-17.8 17.8-43.738 17.8H306.461Zm372.308-552H281.846v490.462q0 9.231 7.692 16.923 7.693 7.692 16.923 7.692h347.693q9.231 0 16.923-7.692 7.692-7.692 7.692-16.923v-490.462Zm-396.923 0v515.077-515.077Z"/></svg>
                             : null}
-                        {getDateString(item.id)}
                     </label>
                 ))}
             {taskCompleted && <span className="fixed top-3 left-3 z-50 border rounded px-2 py-1 bg-blue-600 animate-pulse-shortout shadow shadow-white">Task completed !</span>}
