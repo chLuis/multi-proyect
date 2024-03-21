@@ -4,6 +4,7 @@ import ToDoList from "./ToDoList";
 export default function ToDo({dataLoad}) {
     const [newTask, setNewTask] = useState('')
     const [allTask, setAllTask] = useState(dataLoad)
+    const [taskCreated, setTaskCreated] = useState(false)
     
     function handleToDo(e) {
         setNewTask(e.target.value)
@@ -24,6 +25,10 @@ export default function ToDo({dataLoad}) {
         todoStorage.push(newTodo)
         setAllTask(todoStorage)
         localStorage.setItem('todoList', JSON.stringify(todoStorage))
+        setTaskCreated(true)
+        setTimeout(() => {
+            setTaskCreated(false)
+        }, 850)
     }
 
     return (
@@ -38,6 +43,7 @@ export default function ToDo({dataLoad}) {
                 </button>
             </label>
             <ToDoList data={allTask} />
+            {taskCreated && <span className="fixed top-3 left-3 z-50 border rounded px-2 py-1 bg-emerald-500 animate-pulse-shortout shadow shadow-white">Task created !</span>}
         </div>
     );
 }

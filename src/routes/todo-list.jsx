@@ -6,7 +6,8 @@ import ToDo from "../components/ToDo";
 
 export default function TodoPage() {
 
-    const [preloadTodoList, setPreloadTodoList] = useState([])
+    const [preloadTodoList, setPreloadTodoList] = useState(JSON.parse(localStorage.getItem("todoList")) || [])
+    const [afterLoadList, setAfterLoadList] = useState(preloadTodoList)
 
     const INITIAL_TODO = [
         {
@@ -26,18 +27,19 @@ export default function TodoPage() {
         }
     ]
 
-
+console.log(preloadTodoList)
 
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem("todoList")) || []
         //console.log(data)
         if(data && data.length > 0) {
-            //console.log("if")
+            console.log("if")
             setPreloadTodoList(data)
+            setAfterLoadList(data)
         } else {
             //console.log("else")
             localStorage.setItem("todoList", JSON.stringify(INITIAL_TODO))
-            setPreloadTodoList(INITIAL_TODO)
+            setAfterLoadList(INITIAL_TODO)
         }
     } , [])
     
@@ -45,7 +47,7 @@ export default function TodoPage() {
     return (
         <div className="flex flex-col justify-center items-center">
         <TitleProyect title={"TODO List"} />
-            <ToDo dataLoad={preloadTodoList}/>
+            <ToDo dataLoad={afterLoadList}/>
         </div>
     )
 }
