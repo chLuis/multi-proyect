@@ -27,7 +27,7 @@ export default function FetchWeather() {
             <h2 className="text-4xl mb-4 font-semibold">WEATHER API</h2>
             <h4 className="mb-1">Insert a location</h4>
             <div className="flex gap-2 justify-center items-center mb-8">
-                <input value={location} onChange={(e) => setLocation(e.target.value)} onKeyDown={(e) => handleKeyDown(e)} className="rounded py-1 px-2" placeholder="ex: Paris, Buenos Aires..."/>
+                <input value={location} onChange={(e) => setLocation(e.target.value)} onKeyDown={(e) => handleKeyDown(e)} className="rounded py-1 px-2 bg-neutral-950 bg-opacity-85" placeholder="ex: Paris, Buenos Aires..."/>
                 <button onClick={getWeather} className="border rounded px-2 bg-orange-500 hover:bg-orange-800 duration-200 ">Search</button>
             </div>
             {weather && <div className="relative flex flex-col justify-between gap-1 items-center w-80 h-[350px] border rounded py-2 px-2 animate-pulse-short">
