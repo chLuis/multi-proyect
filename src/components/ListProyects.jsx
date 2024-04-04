@@ -16,6 +16,10 @@ export default function ListProyects() {
         {
             name: "API",
             link: "fetch-api"
+        },
+        {
+            name: "Formation",
+            link: "formation"
         }
     ]
 

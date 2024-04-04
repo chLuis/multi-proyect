@@ -9,6 +9,7 @@ import CreatePostPage from './routes/create-post.jsx';
 import FetchApiPage from './routes/fetch-api.jsx';
 import ErrorPage from './components/Error404.jsx';
 import ToPortfolio from './components/ToPorfolio.jsx';
+import FormationPage from './routes/formation.tsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/fetch-api',
     element: <FetchApiPage />
+  },
+  {
+    path: '/formation',
+    element: <FormationPage />
   },
 ])
 
