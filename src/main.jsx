@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   {
     path: '/formation',
     element: <FormationPage />
-  },
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
