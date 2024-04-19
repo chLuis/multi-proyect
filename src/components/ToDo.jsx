@@ -8,7 +8,10 @@ export default function ToDo({dataLoad}) {
     const [insertText, setInsertText] = useState("bg-orange-400")
     
     function handleToDo(e) {
+        const task = e.target.value.trim()
+        if(task !== '') {
         setNewTask(e.target.value)
+        }
     }
     useEffect(() => {
         setAllTask(dataLoad)
@@ -49,7 +52,7 @@ export default function ToDo({dataLoad}) {
                 <span className="absolute -inset-y-1 border-b border-orange-400 h-6 left-2 text-neutral-500 text-nowrap">
                     task:
                 </span>
-                <input type="text" value={newTask} onChange={(e) => handleToDo(e)} onKeyDown={(e) => handleKeyDown(e)} className="min-w-0 w-full rounded py-2 ps-12 pe-12 bg-black bg-opacity-65 focus:bg-opacity-75" />
+                <input type="text" value={newTask} onChange={(e) => handleToDo(e)} onKeyDown={(e) => handleKeyDown(e)} className="min-w-0 w-full rounded py-2 ps-12 pe-12 bg-black bg-opacity-65 focus:bg-opacity-75" autoFocus />
                 <button type="button" onClick={addNewTask}  className={`${insertText} duration-200 absolute font-extrabold inset-y-0 right-2 px-2 flex items-center justify-center text-xl text-white border border-transparent rounded-r-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 pb-1`}>
                     +
                 </button>
