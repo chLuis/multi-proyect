@@ -20,7 +20,7 @@ hr {
   margin: auto;
   height: 100%;
   max-width: 1700px;
-  grid-template-columns: minmax(336px, 30%) 70%;
+  grid-template-columns: minmax(336px, 30%) minmax(330px, 70%);
   transition: 0.5s;
 }
 .boxLeft {
@@ -30,6 +30,7 @@ hr {
   background-color: rgb(17,27,33);
   border-right: 1px solid rgb(71, 51, 51);
   overflow-x: clip;
+  z-index: 1;
 }
 .boxProfile {
   display: flex;
@@ -89,14 +90,16 @@ hr {
 }
 
 .boxChatList {
+  min-height: 100%;
   height: 100%;
-  max-height: 770px;
+  /*max-height: 770px;*/
   background-color: rgb(17,27,33);
   display: flex;
   flex-direction: column;
   max-width: 100%;
   overflow-y: auto !important;
   margin-right: 2px;
+  padding-bottom: 120px;
 }
 .boxChatList::-webkit-scrollbar{
   width: 6px;
@@ -224,7 +227,8 @@ input:focus::placeholder {
   gap: 4px;
   padding-top: 24px;
   margin-bottom: 16px;
-  font-size: 14px;
+  font-size: clamp(0.5rem, 12px , 16px);
+  text-wrap: nowrap;
 }
 .textHighlined{
   color: rgb(124, 124, 200);
@@ -244,18 +248,17 @@ input:focus::placeholder {
 .boxRightTop{
   display: flex;
   height: 50%;
-  justify-content: flex-end;
   align-items: flex-end;
+  justify-content: center;
 }
 .imageBoxRight{
   width: 320px;
   height: fit-content;
-  margin-inline: auto;
-  display: flex;
 }
 
 .boxRightBottom{
   height: 50%;
+  padding-top: 12px;
 }
 .boxRightBottomTop{
   height: 50%;
@@ -273,7 +276,7 @@ input:focus::placeholder {
   margin-inline: auto;
   text-align: center;
   font-size: 14px;
-  width: 550px;
+  max-width: 550px;
   color: #8696a0;
 }
 
@@ -297,20 +300,24 @@ input:focus::placeholder {
 
 .boxRightFooter {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   min-height: 0px;
   height: 50%;
-  padding-top: 48px;
-  padding-bottom: 24px;
+  padding-top: 52px;
+  padding-bottom: 48px;
   font-size: 14px;
   color: #667781;
+  min-width: 0px;
 }
 .boxRightFooter div{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 4px;
+  text-wrap: nowrap;
+  z-index: 0;
+  min-width: 0;
+  width: 100%;
 }
 .boxChatPreview:hover {
   background-color: rgb(34,46,53);
@@ -334,6 +341,11 @@ input:focus::placeholder {
   .bigBox{
     margin: auto;
     overflow: hidden;
+  }
+}
+@media (max-width:740px){
+  .boxRightFooter div{
+    justify-content: flex-start;
   }
 }
 
