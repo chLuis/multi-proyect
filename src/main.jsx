@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <FormationPage />
   },
   {
-    path: '/testing',
+    path: '/wspFake',
     element: <TestWsp />
   }
 ])
