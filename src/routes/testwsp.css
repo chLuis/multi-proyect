@@ -65,7 +65,7 @@ hr {
   height: 48px;
   grid-template-columns: auto 40px;
 }
-.boxSearchChat > div {
+.boxSearchChat > label {
   display: grid;
   grid-template-columns: 10% 90%;
   height: 35px;
@@ -79,7 +79,7 @@ hr {
   }
   > input {
     background-color: rgb(34,46,53);
-    margin-inline-start: 14px;
+    margin-inline-start: 17px;
     font-size: 14px;
   }
 }
@@ -151,7 +151,7 @@ hr {
   margin-block: auto;
 }
 .nameChatList {
-  font-size: 16px;
+  font-size: 17px;
   color: rgb(242, 236, 231);
 }
 .textChatList {
@@ -190,7 +190,7 @@ hr {
 
 input {
   outline: none;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 input:focus::placeholder {
   color: transparent;
