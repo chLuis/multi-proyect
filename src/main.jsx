@@ -10,6 +10,7 @@ import FetchApiPage from './routes/fetch-api.jsx';
 import ErrorPage from './components/Error404.jsx';
 import ToPortfolio from './components/ToPorfolio.jsx';
 import FormationPage from './routes/formation.tsx';
+import TestWsp from './routes/testwsp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: '/formation',
     element: <FormationPage />
+  },
+  {
+    path: '/testing',
+    element: <TestWsp />
   }
 ])
 
