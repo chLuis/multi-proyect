@@ -20,7 +20,7 @@ export default function TestWsp(){
           <div className='boxSearchChat'>
             <label name="search" className='boxSearchOptions'>
               <div className='showSearch'>
-              <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>search</title><path fill="gray" d="M15.009,13.805h-0.636l-0.22-0.219c0.781-0.911,1.256-2.092,1.256-3.386 c0-2.876-2.332-5.207-5.207-5.207c-2.876,0-5.208,2.331-5.208,5.207s2.331,5.208,5.208,5.208c1.293,0,2.474-0.474,3.385-1.255 l0.221,0.22v0.635l4.004,3.999l1.194-1.195L15.009,13.805z M10.201,13.805c-1.991,0-3.605-1.614-3.605-3.605 s1.614-3.605,3.605-3.605s3.605,1.614,3.605,3.605S12.192,13.805,10.201,13.805z"></path></svg>
+              <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>search</title><path fill="rgb(134,150,160)" d="M15.009,13.805h-0.636l-0.22-0.219c0.781-0.911,1.256-2.092,1.256-3.386 c0-2.876-2.332-5.207-5.207-5.207c-2.876,0-5.208,2.331-5.208,5.207s2.331,5.208,5.208,5.208c1.293,0,2.474-0.474,3.385-1.255 l0.221,0.22v0.635l4.004,3.999l1.194-1.195L15.009,13.805z M10.201,13.805c-1.991,0-3.605-1.614-3.605-3.605 s1.614-3.605,3.605-3.605s3.605,1.614,3.605,3.605S12.192,13.805,10.201,13.805z"></path></svg>
               </div>
               <div className='goSearch'>
               <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>back</title><path fill="rgb(1,168,132)" d="M12,4l1.4,1.4L7.8,11H20v2H7.8l5.6,5.6L12,20l-8-8L12,4z"></path></svg>
@@ -42,12 +42,12 @@ export default function TestWsp(){
                 <div className='boxChatText'>
                   <div className='chatText'>
                     <p className='nameChatList'>Gastos</p>
-                    <p className='textChatList'>Texto random que debo agregar</p>
+                    <p className='textChatList'>Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar </p>
                   </div>
                   <div className='hourShowMore'>
                     <p className='textHour'>22:52</p>
                     <span className='showOnlyHover'>
-                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="currentColor" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
+                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
                   </div>
                 </div>
@@ -293,6 +293,91 @@ export default function TestWsp(){
                   </div>
                 </div>
                 <hr />
+              </div>
+            </div>
+            <div className='boxChatPreview'>
+              <div className='pictureChat'>
+                <img src='/images/wsp-chat.webp' />
+              </div>
+              <div className='boxChatTextPreview'>
+                <div className='boxChatText'>
+                  <div className='chatText'>
+                    <p className='nameChatList'>Nombre a elegir</p>
+                    <p className='textChatList'>Texto random que debo agregar</p>
+                  </div>
+                  <div className='hourShowMore'>
+                    <p className='textHour'>22:52</p>
+                    <span className='showOnlyHover'>
+                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="currentColor" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
+                    </span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <div className='boxChatPreview'>
+              <div className='pictureChat'>
+                <img src='/images/wsp-chat.webp' />
+              </div>
+              <div className='boxChatTextPreview'>
+                <div className='boxChatText'>
+                  <div className='chatText'>
+                    <p className='nameChatList'>Nombre a elegir</p>
+                    <p className='textChatList'>Texto random que debo agregar</p>
+                  </div>
+                  <div className='hourShowMore'>
+                    <p className='textHour'>22:52</p>
+                    <span className='showOnlyHover'>
+                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="currentColor" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
+                    </span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <div className='boxChatPreview'>
+              <div className='pictureChat'>
+                <img src='/images/wsp-chat.webp' />
+              </div>
+              <div className='boxChatTextPreview'>
+                <div className='boxChatText'>
+                  <div className='chatText'>
+                    <p className='nameChatList'>Nombre a elegir</p>
+                    <p className='textChatList'>Texto random que debo agregar</p>
+                  </div>
+                  <div className='hourShowMore'>
+                    <p className='textHour'>22:52</p>
+                    <span className='showOnlyHover'>
+                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="currentColor" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
+                    </span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+
+
+
+
+
+            <div className='boxChatPreview'>
+              <div className='pictureChat'>
+                <img src='/images/wsp-chat.webp' />
+              </div>
+              <div className='boxChatTextPreview'>
+                <div className='boxChatText'>
+                  <div className='chatText'>
+                    <p className='nameChatList'>Nombre a elegir</p>
+                    <p className='textChatList'>Texto random que debo agregar</p>
+                  </div>
+                  <div className='hourShowMore'>
+                    <p className='textHour'>22:52</p>
+                    <span className='showOnlyHover'>
+                        <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px" enable-background="new 0 0 30 30"><title>chevron-right</title><path fill="currentColor" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
+                    </span>
+                  </div>
+                </div>
+               
               </div>
             </div>
 
@@ -363,7 +448,7 @@ export default function TestWsp(){
 
             <footer className='footerLeftSide'>
             <span>
-            <svg viewBox="0 0 10 12" height="12" width="10" preserveAspectRatio="xMidYMid meet" version="1.1"><title>lock-small</title><path d="M5.00847986,1.6 C6.38255462,1.6 7.50937014,2.67435859 7.5940156,4.02703389 L7.59911976,4.1906399 L7.599,5.462 L7.75719976,5.46214385 C8.34167974,5.46214385 8.81591972,5.94158383 8.81591972,6.53126381 L8.81591972,9.8834238 C8.81591972,10.4731038 8.34167974,10.9525438 7.75719976,10.9525438 L2.25767996,10.9525438 C1.67527998,10.9525438 1.2,10.4731038 1.2,9.8834238 L1.2,6.53126381 C1.2,5.94158383 1.67423998,5.46214385 2.25767996,5.46214385 L2.416,5.462 L2.41679995,4.1906399 C2.41679995,2.81636129 3.49135449,1.68973395 4.84478101,1.60510326 L5.00847986,1.6 Z M5.00847986,2.84799995 C4.31163824,2.84799995 3.73624912,3.38200845 3.6709675,4.06160439 L3.6647999,4.1906399 L3.663,5.462 L6.35,5.462 L6.35111981,4.1906399 C6.35111981,3.53817142 5.88169076,2.99180999 5.26310845,2.87228506 L5.13749818,2.85416626 L5.00847986,2.84799995 Z" fill="currentColor"></path></svg>
+            <svg viewBox="0 0 10 12" height="16" width="12" preserveAspectRatio="xMidYMid meet" version="1.1"><title>lock-small</title><path d="M5.00847986,1.6 C6.38255462,1.6 7.50937014,2.67435859 7.5940156,4.02703389 L7.59911976,4.1906399 L7.599,5.462 L7.75719976,5.46214385 C8.34167974,5.46214385 8.81591972,5.94158383 8.81591972,6.53126381 L8.81591972,9.8834238 C8.81591972,10.4731038 8.34167974,10.9525438 7.75719976,10.9525438 L2.25767996,10.9525438 C1.67527998,10.9525438 1.2,10.4731038 1.2,9.8834238 L1.2,6.53126381 C1.2,5.94158383 1.67423998,5.46214385 2.25767996,5.46214385 L2.416,5.462 L2.41679995,4.1906399 C2.41679995,2.81636129 3.49135449,1.68973395 4.84478101,1.60510326 L5.00847986,1.6 Z M5.00847986,2.84799995 C4.31163824,2.84799995 3.73624912,3.38200845 3.6709675,4.06160439 L3.6647999,4.1906399 L3.663,5.462 L6.35,5.462 L6.35111981,4.1906399 C6.35111981,3.53817142 5.88169076,2.99180999 5.26310845,2.87228506 L5.13749818,2.85416626 L5.00847986,2.84799995 Z" fill="currentColor"></path></svg>
             </span>
               Tus mensajes personales están <span className='textHighlined'>cifrados de extremo a extremo</span>.
             </footer>
