@@ -3,11 +3,12 @@ import './testwsp.css';
 export default function TestWsp(){
   return(
     <main className="windowsWspFake">
+    <img className='loading' src='/images/wsp-loading.webp'/>
       <section className="bigBox">
         <article className="boxLeft">
           <header className='boxProfile'>
             <figure className='photoProfile'>
-              <img src='/images/wsp-chat.webp'/>
+              <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/429519356_952657249205543_9090372850506873388_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIAFfCN5OHuSkLsqoIJriWGX4UBw1KMKl42m5ps0Od0U2&oe=66395012&_nc_sid=e6ed6c&_nc_cat=103"/>
             </figure>
               <div className='iconsOptions'>
                 <span><svg viewBox="0 0 24 24" height="30" width="24" preserveAspectRatio="xMidYMid meet" fill="none"><title>community-outline</title><path fill-rule="evenodd" clip-rule="evenodd" d="M6.37092 18.6728C6.22765 18.5403 6.10431 18.3762 6.00888 18.1973C5.88011 17.9559 5.80217 17.6876 5.79472 17.4335C5.77992 16.9291 5.75694 15.9341 5.81691 15.4918C5.84367 15.2944 5.89021 15.111 5.95079 14.9421C6.02312 14.7405 6.11792 14.5597 6.22835 14.3977C6.44698 14.077 6.72688 13.8296 7.01486 13.6386C7.04895 13.616 7.08314 13.5941 7.11736 13.5731C7.57933 13.2888 8.09602 13.1117 8.52831 12.9865C8.90306 12.878 9.34961 12.7693 9.85702 12.6823C10.485 12.5746 11.2062 12.5001 12 12.5001C12.7937 12.5001 13.5149 12.5746 14.1429 12.6823C14.6503 12.7693 15.0969 12.878 15.4716 12.9865C15.9039 13.1117 16.4206 13.2888 16.8826 13.5731C16.9168 13.5941 16.951 13.616 16.9851 13.6386C17.2731 13.8296 17.553 14.077 17.7716 14.3977C17.882 14.5597 17.9768 14.7405 18.0492 14.9421C18.1097 15.111 18.1563 15.2944 18.183 15.4918C18.243 15.9341 18.22 16.9291 18.2052 17.4335C18.1978 17.6876 18.1198 17.9559 17.9911 18.1973C17.8956 18.3762 17.7723 18.5403 17.629 18.6729C17.4138 18.872 17.1536 19 16.8756 19H7.12434C6.84632 19 6.58614 18.872 6.37092 18.6728ZM19.9606 15.4041C20.0099 15.9938 20.0031 16.2628 19.992 17C19.9887 17.22 19.985 17.3926 19.9822 17.4856C19.9692 17.9298 19.8643 18.6252 19.6869 19H22.6608C23.3769 19 23.9744 17.1535 23.9908 16.4244C24 16.0153 24.0117 16.2932 23.9736 15.9559C23.8921 15.2339 23.4788 14.7098 23.0245 14.3596C22.5875 14.0227 22.0691 13.8088 21.6087 13.6766C21.6029 13.675 21.5972 13.6733 21.5915 13.6717C21.5881 13.6707 21.5847 13.6698 21.5813 13.6688C21.5228 13.6524 21.4627 13.6362 21.401 13.6205C20.8883 13.49 20.2632 13.389 19.5555 13.389C19.5378 13.389 19.52 13.3891 19.5023 13.3892C19.4137 13.3898 19.3264 13.392 19.2405 13.3957C19.355 13.5637 19.4612 13.7454 19.5555 13.942C19.5647 13.9611 19.5738 13.9805 19.5828 13.9999C19.6332 14.1094 19.68 14.2234 19.7226 14.342C19.8237 14.6239 19.9007 14.9282 19.9447 15.253C19.9506 15.2963 19.9559 15.347 19.9606 15.4041ZM17.9339 11.4492C18.2894 11.7225 18.7156 11.9081 19.1802 11.9737C19.3028 11.991 19.4281 12 19.5555 12C20.1263 12 20.6553 11.8201 21.089 11.5141C21.7744 11.0305 22.2222 10.2319 22.2222 9.33C22.2222 7.85724 21.0283 6.67 19.5555 6.67C18.7591 6.67 18.0441 7.01722 17.5555 7.56905C17.1406 8.03762 16.8889 8.65371 16.8889 9.33C16.8889 9.57007 16.9206 9.80282 16.9801 10.0243C17.1343 10.5986 17.4753 11.0968 17.9339 11.4492ZM14.8977 9.61901C14.9641 9.52593 15.0262 9.42949 15.0835 9.33C15.3838 8.80927 15.5555 8.20499 15.5555 7.56C15.5555 7.36964 15.5406 7.18272 15.5117 7.00038C15.2434 5.30182 13.7733 4 12 4C10.2267 4 8.75657 5.30182 8.4882 7.00038C8.45939 7.18272 8.44443 7.36964 8.44443 7.56C8.44443 8.20499 8.61617 8.80927 8.91642 9.33C8.97378 9.42949 9.03584 9.52593 9.10229 9.61901C9.38894 10.0206 9.75728 10.3599 10.1831 10.6129C10.7148 10.9287 11.3362 11.11 12 11.11C12.6638 11.11 13.2851 10.9287 13.8168 10.6129C14.2427 10.3599 14.611 10.0206 14.8977 9.61901ZM7.01988 10.0243C7.07937 9.80282 7.1111 9.57007 7.1111 9.33C7.1111 8.65371 6.85934 8.03762 6.44443 7.56905C5.95581 7.01722 5.2409 6.67 4.44444 6.67C2.97168 6.67 1.77777 7.85724 1.77777 9.33C1.77777 10.2319 2.22555 11.0305 2.91093 11.5141C3.34469 11.8201 3.87362 12 4.44444 12C4.5718 12 4.6971 11.991 4.8197 11.9737C5.28435 11.9081 5.71054 11.7225 6.06606 11.4492C6.52463 11.0967 6.86561 10.5985 7.01988 10.0243ZM2.599 13.6205C2.53726 13.6362 2.47715 13.6524 2.41872 13.6688C2.41531 13.6698 2.41189 13.6707 2.40848 13.6717C2.40276 13.6733 2.39702 13.675 2.39128 13.6766C1.9309 13.8088 1.41245 14.0227 0.975466 14.3596C0.521192 14.7098 0.107939 15.2339 0.0263682 15.9559C-0.0117388 16.2932 2.95136e-05 17.0153 0.00922726 17.4244C0.0256195 18.1535 0.623061 19 1.33916 19H4.31303C4.13562 18.6252 4.03074 17.9298 4.01771 17.4856C4.01498 17.3926 4.01127 17.22 4.00795 17C3.99682 16.2628 3.99008 15.9938 4.03932 15.4041C4.04409 15.347 4.04938 15.2963 4.05525 15.253C4.09928 14.9282 4.17628 14.6239 4.27738 14.342C4.31992 14.2234 4.36671 14.1094 4.41718 13.9999C4.42615 13.9805 4.43524 13.9612 4.44444 13.942C4.53872 13.7454 4.64492 13.5636 4.7595 13.3957C4.67357 13.392 4.58626 13.3898 4.49762 13.3892C4.47995 13.3891 4.46224 13.389 4.44446 13.389C3.73676 13.389 3.11171 13.49 2.599 13.6205ZM12 14.5001C10.7893 14.5001 9.78078 14.706 9.08457 14.9076C8.70827 15.0166 8.39668 15.1342 8.16548 15.2764C7.94245 15.4137 7.86482 15.5296 7.83338 15.6173C7.81839 15.6591 7.80612 15.7064 7.79878 15.7605C7.79943 15.7557 7.7992 15.7596 7.7984 15.7735C7.79628 15.8102 7.79017 15.9159 7.78551 16.1142C7.77998 16.3491 7.77773 16.6382 7.77778 16.9391C7.77784 17.3256 7.78168 16.7121 7.78618 17H16.2138C16.2183 16.7121 16.2221 17.3256 16.2222 16.9391C16.2222 16.6383 16.22 16.3491 16.2144 16.1142C16.2098 15.9159 16.2037 15.8101 16.2016 15.7735C16.2007 15.7596 16.2005 15.7557 16.2012 15.7605C16.1938 15.7064 16.1816 15.6591 16.1666 15.6173C16.1351 15.5296 16.0575 15.4137 15.8345 15.2764C15.6033 15.1342 15.2917 15.0166 14.9154 14.9076C14.2192 14.706 13.2107 14.5001 12 14.5001ZM12 6C11.1441 6 10.4444 6.69763 10.4444 7.56C10.4444 8.41504 11.1368 9.11 12 9.11C12.8632 9.11 13.5555 8.41504 13.5555 7.56C13.5555 6.69763 12.8558 6 12 6Z" fill="currentColor"></path></svg></span>
@@ -47,7 +48,7 @@ export default function TestWsp(){
                       <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      $20000 de luz
                     </span>
                     </p>
                   </div>
@@ -64,18 +65,18 @@ export default function TestWsp(){
 
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/rtsyhr' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/301439940_116500521203102_3299349136476507305_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIDQTMsFPzWymMU2ICewLoawZETLcNyv3skc062qNJUC6&oe=6636CB16&_nc_sid=e6ed6c&_nc_cat=108" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Mariano</p>
                     <p className='textChatList'>
                     <span>
                       <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Hoy se juega a la pelota, vas?
                     </span>
                     </p>
                   </div>
@@ -91,23 +92,20 @@ export default function TestWsp(){
             </div>
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/as23d' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/425546086_1609855713150481_5740327734460443682_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIFWOfB9QKv7dIuSYq7Ogv8OFgbyS1fWFRy7kjN4VPEUG&oe=6639476C&_nc_sid=e6ed6c&_nc_cat=102" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Dai</p>
                     <p className='textChatList'>
-                    <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
-                    </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      El domingo asado en mi casa
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>21:22</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -119,23 +117,23 @@ export default function TestWsp(){
 
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stefan-two' />
+                <img src='https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/370537000_139984202508088_3619165344788927939_n.jpg?stp=dst-jpg_s96x96&amp;ccb=11-4&amp;oh=01_Q5AaICIqFUFwk8JExX79QI6VEHQ63fjDRY88haLoaaEYeoZX&amp;oe=6636A5CC&amp;_nc_sid=e6ed6c&amp;_nc_cat=109' />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Gabriela</p>
                     <p className='textChatList'>
                     <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
+                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="#53bdeb" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Ya hice mi parte, cuando nos conectamos?
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>20:28</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -147,23 +145,20 @@ export default function TestWsp(){
 
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stefan-one' />
+                <img src='https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/161974473_414581580487797_3682940019197293250_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaINxY_b8470uSJq2H87U8ZRoL7oyhyhpZKIndT2ZgpgEa&oe=6639504A&_nc_sid=e6ed6c&_nc_cat=110' />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Adolfo</p>
                     <p className='textChatList'>
-                    <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
-                    </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      lol ?
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>20:52</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -175,23 +170,23 @@ export default function TestWsp(){
 
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stefan-three' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/418510322_1295329308509667_8969091329936507975_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaILzDH0uGyJcAvZjYFCQSOswE9i4lK6HqUtnhysU0QGVi&oe=6638AADF&_nc_sid=e6ed6c&_nc_cat=110" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Pri</p>
                     <p className='textChatList'>
                     <span>
                       <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      No puedo ir
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>19:33</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -203,23 +198,23 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stefa55hree' />
+                <img src='https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/256947678_1316461958821260_4355380543494983824_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaID-On5iBXmMo0WOCfZjADL4h8e4mhHE3akKtUCNbDnfD&oe=663950CA&_nc_sid=e6ed6c&_nc_cat=100' />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Hernán</p>
                     <p className='textChatList'>
                     <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
+                      <svg viewBox="0 0 16 16" height="20" width="16" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-sticker</title><path fill="currentColor" d="M9.179,14.637c0.061-0.14,0.106-0.29,0.135-0.45 c0.031-0.171,0.044-0.338,0.049-0.543c0.002-0.078,0.003-0.155,0.003-0.233c0-0.043,0-0.043,0.001-0.067c0-0.024,0-0.024,0-0.072 l0.002-0.216c0.01-0.364,0.032-1.205,0.08-1.473c0.052-0.287,0.136-0.538,0.255-0.771c0.122-0.237,0.281-0.453,0.472-0.642 c0.193-0.191,0.412-0.349,0.653-0.469c0.238-0.12,0.493-0.203,0.786-0.255c0.27-0.048,1.098-0.07,1.487-0.08l0.152,0.001 c0.027,0,0.027,0,0.047,0c0.045,0,0.088-0.001,0.325-0.004c0.221-0.006,0.384-0.018,0.554-0.048 c0.177-0.032,0.341-0.081,0.494-0.151c-0.201,0.923-0.671,1.77-1.359,2.429c-0.561,0.538-1.264,1.194-2.057,1.924 C10.667,14.061,9.951,14.444,9.179,14.637z M7.358,14.797c-0.203,0.005-0.406,0.01-0.474,0.012c-0.301,0.007-0.448,0.01-0.507,0.009 c-0.551-0.015-0.96-0.046-1.372-0.119c-0.481-0.086-0.912-0.226-1.314-0.428c-0.416-0.209-0.794-0.48-1.123-0.807 c-0.33-0.326-0.605-0.699-0.816-1.11c-0.205-0.397-0.347-0.824-0.434-1.303c-0.074-0.411-0.106-0.827-0.12-1.356 C1.193,9.5,1.19,9.297,1.189,9.078c-0.002-0.206-0.002-0.37-0.002-0.736V7.668c0-0.274,0-0.396,0.001-0.549 c0-0.064,0.001-0.125,0.001-0.182c0.001-0.223,0.004-0.426,0.009-0.62c0.014-0.529,0.046-0.946,0.121-1.358 c0.087-0.476,0.229-0.903,0.434-1.301c0.211-0.411,0.485-0.784,0.814-1.109c0.33-0.327,0.708-0.599,1.122-0.807 c0.403-0.203,0.834-0.344,1.315-0.429c0.413-0.074,0.822-0.105,1.379-0.12c0.72-0.009,0.989-0.011,1.359-0.011H8.27 c0.896,0.003,1.143,0.005,1.366,0.011c0.55,0.015,0.959,0.046,1.371,0.12c0.482,0.085,0.913,0.226,1.314,0.428 c0.416,0.209,0.794,0.48,1.123,0.806c0.331,0.327,0.605,0.7,0.814,1.109c0.206,0.4,0.348,0.827,0.434,1.302 c0.075,0.412,0.107,0.819,0.121,1.356c0.006,0.198,0.009,0.402,0.01,0.619c0,0.008,0,0.016,0,0.024c0,0.069-0.001,0.132-0.003,0.194 c-0.004,0.162-0.014,0.283-0.033,0.391c-0.019,0.106-0.05,0.197-0.092,0.28c-0.044,0.085-0.1,0.162-0.168,0.229 c-0.069,0.069-0.148,0.125-0.234,0.168s-0.179,0.074-0.29,0.094c-0.108,0.019-0.227,0.028-0.395,0.033 c-0.231,0.003-0.27,0.003-0.311,0.004c-0.018,0-0.018,0-0.039,0l-0.163-0.001c-0.453,0.012-1.325,0.036-1.656,0.096 c-0.388,0.069-0.737,0.183-1.064,0.348c-0.336,0.168-0.643,0.389-0.911,0.655c-0.267,0.263-0.49,0.566-0.661,0.899 c-0.166,0.324-0.281,0.67-0.351,1.054c-0.06,0.33-0.085,1.216-0.096,1.636l-0.002,0.23c0,0.052,0,0.052,0,0.069 c0,0.019,0,0.019-0.001,0.067c0,0.074-0.001,0.143-0.003,0.213c-0.004,0.158-0.014,0.28-0.033,0.388 c-0.02,0.106-0.05,0.197-0.092,0.279c-0.044,0.085-0.1,0.162-0.168,0.229c-0.069,0.069-0.148,0.125-0.234,0.168 c-0.086,0.043-0.179,0.073-0.289,0.093C7.478,14.785,7.421,14.792,7.358,14.797z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Sticker
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>18:02</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -231,23 +226,23 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stree' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/344455381_1030183248354722_5799318174052758271_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIH3uODkJbs8SKEmtfefgqVicjVP9vngF6dni8yrjZBHA&oe=6636CFF6&_nc_sid=e6ed6c&_nc_cat=111" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Maxi</p>
                     <p className='textChatList'>
                     <span>
                       <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Listo, ya lo presenté!
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>14:07</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -259,23 +254,20 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stethree' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/57556983_2395347163829880_3088307843485401088_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIHL5LT7Y5buSil169yHAJBen5klTRm2gWrjFXSJBlWfF&oe=6638D5BB&_nc_sid=e6ed6c&_nc_cat=107" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Erico</p>
                     <p className='textChatList'>
-                    <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
-                    </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Vieja como andas?
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>11:11</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -287,23 +279,23 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/33gefan-three' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/424425434_1156045632250245_7269222847415074304_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIC9u8ZHWsxVIOH2l83T5VFoDMQ3Q0IjGCAgKErFci8hj&oe=6638C671&_nc_sid=e6ed6c&_nc_cat=103" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Martín</p>
                     <p className='textChatList'>
                     <span>
                       <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
                     </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Hoy se entrega el práctico, como lo hiciste? Yo no hice nada!!! Me quiero matar
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>7:58</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -315,23 +307,20 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/steferfree' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/425112536_388521983759889_2240825185364318291_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIAm945l6jGrqZIxzgBgwjw1mt2CsXjCr1OLCX8P9tR4l&oe=6638BB29&_nc_sid=e6ed6c&_nc_cat=106" />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Gonzalo</p>
                     <p className='textChatList'>
-                    <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
-                    </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Hoy se llega a oro pepito
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>2:52</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -343,7 +332,7 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/stef2three' />
+                <img src='https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/370537000_139984202508088_3619165344788927939_n.jpg?stp=dst-jpg_s96x96&amp;ccb=11-4&amp;oh=01_Q5AaICIqFUFwk8JExX79QI6VEHQ63fjDRY88haLoaaEYeoZX&amp;oe=6636A5CC&amp;_nc_sid=e6ed6c&amp;_nc_cat=109' />
               </div>
               <div className='boxChatTextPreview'>
                 <div className='boxChatText'>
@@ -359,7 +348,7 @@ export default function TestWsp(){
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>Ayer</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -371,23 +360,20 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src='https://robohash.org/33hree' />
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/427266923_1015496310146202_8698203916216211040_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIGRsA6HqTe8KLGRGJ3GZlYiuLHUbicGfFiV1Zl_fnURi&oe=66394ABA&_nc_sid=e6ed6c&_nc_cat=102"/>
               </div>
-              <div className='boxChatTextPreview'>
+              <div className='boxChatTextPreview lastChat'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Gastos</p>
+                    <p className='nameChatList'>Mar</p>
                     <p className='textChatList'>
-                    <span>
-                      <svg viewBox="0 0 18 18" height="20" width="18" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>status-dblcheck</title><path fill="currentColor" d="M17.394,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-0.427-0.388c-0.171-0.167-0.431-0.15-0.578,0.038L7.792,13.13 c-0.147,0.188-0.128,0.478,0.043,0.645l1.575,1.51c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C17.616,5.456,17.582,5.182,17.394,5.035z M12.502,5.035l-0.57-0.444c-0.188-0.147-0.462-0.113-0.609,0.076l-6.39,8.198 c-0.147,0.188-0.406,0.206-0.577,0.039l-2.614-2.556c-0.171-0.167-0.447-0.164-0.614,0.007l-0.505,0.516 c-0.167,0.171-0.164,0.447,0.007,0.614l3.887,3.8c0.171,0.167,0.43,0.149,0.577-0.039l7.483-9.602 C12.724,5.456,12.69,5.182,12.502,5.035z"></path></svg>
-                    </span>
                     <span className='spanChat'>
-                      Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar Texto random que debo agregar
+                      Me vuelvo a concepción el jueves de la semana que viene
                     </span>
                     </p>
                   </div>
                   <div className='hourShowMore'>
-                    <p className='textHour'>22:52</p>
+                    <p className='textHour'>Ayer</p>
                     <span className='showOnlyHover'>
                         <svg viewBox="0 0 30 30" height="22" preserveAspectRatio="xMidYMid meet" version="1.1" x="0px" y="0px"><title>chevron-right</title><path fill="#8696a0" d="M11,21.212L17.35,15L11,8.65l1.932-1.932L21.215,15l-8.282,8.282L11,21.212z"></path></svg>
                     </span>
@@ -397,7 +383,6 @@ export default function TestWsp(){
               </div>
             </div>
             
-
             {/* <div className='boxChatPreview'>
               <div className='pictureChat'>
                 <img src='/images/fotowspFake4.png' />
