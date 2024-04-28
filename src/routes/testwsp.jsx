@@ -388,12 +388,12 @@ export default function TestWsp(){
             
             <div className='boxChatPreview'>
               <div className='pictureChat'>
-                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/427266923_1015496310146202_8698203916216211040_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIGRsA6HqTe8KLGRGJ3GZlYiuLHUbicGfFiV1Zl_fnURi&oe=66394ABA&_nc_sid=e6ed6c&_nc_cat=102"/>
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/422833534_1436294136970509_3804214950904239737_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIO_cWyFKXoPkGsyeaOW5jOAjbmjZmzTLDNU0acwztOMJ&oe=6636A80B&_nc_sid=e6ed6c&_nc_cat=101"/>
               </div>
               <div className='boxChatTextPreview lastChat'>
                 <div className='boxChatText'>
                   <div className='chatText'>
-                    <p className='nameChatList'>Mar</p>
+                    <p className='nameChatList'>Ramón</p>
                     <p className='textChatList'>
                     <span className='spanChat'>
                       Me vuelvo a concepción el jueves de la semana que viene
