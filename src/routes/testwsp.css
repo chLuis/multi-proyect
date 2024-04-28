@@ -118,6 +118,7 @@ input:focus::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 1px;
   transition: transform 0.1s ease;
   animation: showAgain 0.1s ease-in-out;
   transform: rotate(0deg);
