@@ -3,7 +3,35 @@ import './testwsp.css';
 export default function TestWsp(){
   return(
     <main className="windowsWspFake">
-    <img className='loading' src='/images/wsp-loading.webp'/>
+    <div className='loading'>
+      <div>
+        <div className='min-h-44 flex justify-center items-end pb-11 '>
+          <div className='animacionWSP'>
+
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="66"  height="66"  viewBox="0 0 24 24"  fill="none"  stroke="gray"  strokeWidth="1.5"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg></div>
+          </div>
+        
+        
+        <div className='min-h-[4px] w-80 relative'>
+          <div className='min-h-[2px] min-w-full bg-neutral-500 z-10 absolute top-0 left-0'></div>
+          <div className='animacionCarga'></div>
+        </div>
+
+        
+        <div className='min-h-52 text-gray-500'>
+          <div className='text-lg pt-5 text-center pb-1 text-gray-300'>WhastApp</div>
+          <div className='text-center text-sm flex gap-1 items-center justify-center text-gray-500'>
+          <span>
+          <svg viewBox="0 0 10 12" height="14" width="10" preserveAspectRatio="xMidYMid meet" version="1.1"><title>lock-small</title><path d="M5.00847986,1.6 C6.38255462,1.6 7.50937014,2.67435859 7.5940156,4.02703389 L7.59911976,4.1906399 L7.599,5.462 L7.75719976,5.46214385 C8.34167974,5.46214385 8.81591972,5.94158383 8.81591972,6.53126381 L8.81591972,9.8834238 C8.81591972,10.4731038 8.34167974,10.9525438 7.75719976,10.9525438 L2.25767996,10.9525438 C1.67527998,10.9525438 1.2,10.4731038 1.2,9.8834238 L1.2,6.53126381 C1.2,5.94158383 1.67423998,5.46214385 2.25767996,5.46214385 L2.416,5.462 L2.41679995,4.1906399 C2.41679995,2.81636129 3.49135449,1.68973395 4.84478101,1.60510326 L5.00847986,1.6 Z M5.00847986,2.84799995 C4.31163824,2.84799995 3.73624912,3.38200845 3.6709675,4.06160439 L3.6647999,4.1906399 L3.663,5.462 L6.35,5.462 L6.35111981,4.1906399 C6.35111981,3.53817142 5.88169076,2.99180999 5.26310845,2.87228506 L5.13749818,2.85416626 L5.00847986,2.84799995 Z" fill="currentColor"></path></svg>
+
+          </span>
+          <span>Cifrado de extremo a extremo</span></div>
+        </div>
+
+
+      </div>
+    
+    </div>
       <section className="bigBox">
         <article className="boxLeft">
           <header className='boxProfile'>
