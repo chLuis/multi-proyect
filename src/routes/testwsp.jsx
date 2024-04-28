@@ -379,7 +379,6 @@ export default function TestWsp(){
                     </span>
                   </div>
                 </div>
-                <hr />
               </div>
             </div>
 
