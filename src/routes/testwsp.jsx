@@ -63,7 +63,9 @@ export default function TestWsp(){
           <div className='boxChatList'>
 
 
+              <label htmlFor='chat1' name='chat1'>
             <div className='boxChatPreview'>
+              
               <div className='pictureChat'>
                 <img src='/images/wsp-chat.webp' />
               </div>
@@ -90,7 +92,9 @@ export default function TestWsp(){
                 <hr />
               </div>
             </div>
+              </label>
 
+            <label htmlFor='chat2' name='chat2'>
             <div className='boxChatPreview'>
               <div className='pictureChat'>
                 <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/301439940_116500521203102_3299349136476507305_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIDQTMsFPzWymMU2ICewLoawZETLcNyv3skc062qNJUC6&oe=6636CB16&_nc_sid=e6ed6c&_nc_cat=108" />
@@ -118,6 +122,9 @@ export default function TestWsp(){
                 <hr />
               </div>
             </div>
+            </label>
+
+
             <div className='boxChatPreview'>
               <div className='pictureChat'>
                 <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/425546086_1609855713150481_5740327734460443682_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIFWOfB9QKv7dIuSYq7Ogv8OFgbyS1fWFRy7kjN4VPEUG&oe=6639476C&_nc_sid=e6ed6c&_nc_cat=102" />
@@ -422,7 +429,68 @@ export default function TestWsp(){
 
 
 
-        <article className="boxRight">
+        <article className="boxRight ">
+        <div>
+          <div className='bgFondo'></div>
+          <div className='bgChat'></div>
+          <input type='radio' id='chat1' name='chat1' className='hidden input1'/>
+          <div className='verChat'>
+            <div>
+              <header className='h-[59px] px-3 gap-3 w-full bg-neutral-800 text-white text-lg flex items-center'>
+              <div className='pictureChatBig'>
+                <img src='/images/wsp-chat.webp' />
+              </div>
+              <h4>
+                Gastos
+              </h4>
+              </header>
+              <div>
+                <div>Anotando</div>
+                <div>$20000 de luz</div>
+              </div>
+              <footer className='absolute bottom-0 w-full px-3 bg-neutral-900 h-[59px] flex justify-center items-center'>
+                :D + chat Micro
+              </footer>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div>
+          <div className='bgFondo'></div>
+          <div className='bgChat'></div>
+          <input type='radio' id='chat2' name='chat1' className='hidden input1'/>
+          <div className='verChat'>
+            <div>
+              <header className='h-[59px] px-3 gap-3 w-full bg-neutral-800 text-white text-lg flex items-center'>
+              <div className='pictureChatBig'>
+                <img src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/301439940_116500521203102_3299349136476507305_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_Q5AaIDQTMsFPzWymMU2ICewLoawZETLcNyv3skc062qNJUC6&oe=6636CB16&_nc_sid=e6ed6c&_nc_cat=108" />
+              </div>
+              <h4>
+                Mariano
+              </h4>
+              </header>
+              <div>
+                <div>Anotando</div>
+                <div>Hoy se juega a la pelota, vas?</div>
+              </div>
+              <footer className='absolute bottom-0 w-full px-3 bg-neutral-900 h-[59px] flex justify-center items-center'>
+                :D + chat Micro
+              </footer>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
         <div className='boxRightTop'>
           <div className='imageBoxRight'>
             <img src='/images/wsp-chat.webp' />
