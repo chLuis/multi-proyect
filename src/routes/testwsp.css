@@ -117,6 +117,7 @@ hr {
   background-color: rgb(17,27,33);
   overflow-x: clip;
   z-index: 1;
+  user-select: none;
 }
 .boxProfile {
   display: flex;
@@ -318,8 +319,6 @@ input {
   transition: 0.15s;
 }
 
-/* .lastChat {
-} */
 
 .footerLeftSide {
   display: flex;
@@ -566,6 +565,7 @@ input {
 }
 .lastConnect {
   font-size: 13px;
+  user-select: text;
   color: #8696a0;
 }
 .chatOptions {
@@ -635,8 +635,10 @@ input {
 
 .textChatInGloboI {
   padding-right: 48px;
+  user-select: text;
 }
 .textChatInGloboU {
+  user-select: text;
   padding-right: 32px;
 }
 .hourGlobo {
