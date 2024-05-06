@@ -11,6 +11,7 @@ import ErrorPage from './components/Error404.jsx';
 import ToPortfolio from './components/ToPorfolio.jsx';
 import FormationPage from './routes/formation.tsx';
 import TestWsp from './routes/testwsp.jsx';
+import DesingPage from './routes/design.tsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: '/formation',
     element: <FormationPage />
+  },
+  {
+    path: '/design',
+    element: <DesingPage />
   },
   {
     path: '/wspFake',

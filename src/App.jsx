@@ -24,6 +24,9 @@ function App() {
       case '/wspFake':
         title = 'WhatsApp';
         break;
+      case '/design':
+        title = 'Design';
+        break;
       // Agrega más casos según sea necesario para otras rutas
       default:
         title = 'chLuis';
