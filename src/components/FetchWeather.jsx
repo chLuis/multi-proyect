@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function FetchWeather() {
     const BASE_URL = "https://api.weatherapi.com/v1"
@@ -9,7 +9,7 @@ export default function FetchWeather() {
     const [location, setLocation] = useState("")
 
     //fetch(`${BASE_URL}${currentWeather}?key=${key}&q=${q}`)
-    function getWeather() {
+    function getWeather(location) {
         fetch(`${BASE_URL}${currentWeather}?key=${key}&q=${location}`)
             .then(response => response.json())
             .then(data => setWeather(data))
@@ -18,17 +18,26 @@ export default function FetchWeather() {
     }
     function handleKeyDown(event){
         if(event.key === 'Enter'){
-            getWeather()
+            getWeather(location)
         }
     }
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition(position => {
+            const location = ([position.coords.latitude, position.coords.longitude])
+            const locationString = location.join(" ")
+            setLocation(locationString)
+            getWeather(locationString)
+        })
 
+    },[])
+    
     return (
         <div className="flex flex-col justify-center items-center w-full">
             <h2 className="text-4xl mb-4 font-semibold">WEATHER API</h2>
             <h4 className="mb-1">Insert a location</h4>
             <div className="flex gap-2 justify-center items-center mb-8">
                 <input value={location} onChange={(e) => setLocation(e.target.value)} onKeyDown={(e) => handleKeyDown(e)} className="rounded py-1 px-2 bg-neutral-950 bg-opacity-85" placeholder="ex: Paris, Buenos Aires..."/>
-                <button onClick={getWeather} className="border rounded px-2 bg-orange-500 hover:bg-orange-800 duration-200 ">Search</button>
+                <button onClick={() => getWeather(location)} className="border rounded px-2 bg-orange-500 hover:bg-orange-800 duration-200 ">Search</button>
             </div>
             {weather && <div className="relative flex flex-col justify-between gap-1 items-center w-80 h-[350px] border rounded py-2 px-2 animate-pulse-short">
                 <div className="absolute inset-0 w-full h-full bg-black opacity-45 -z-10 blur-md"></div>
