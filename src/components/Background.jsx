@@ -1,8 +1,12 @@
-export default function Background(){
-    return(
-        
+export default function Background() {
+  return (
     <>
-        <div className="fixed blur flex justify-center items-center top-4 right-5 w-52 h-52 rounded-full border border-white -z-20 bg-gradient-to-bl animate-spin-long from-stone-100 to-blue-950  bg-opacity-10">
+    </>
+  );
+}
+
+/*
+<div className="fixed blur flex justify-center items-center top-4 right-5 w-52 h-52 rounded-full border border-white -z-20 bg-gradient-to-bl animate-spin-long from-stone-100 to-blue-950  bg-opacity-10">
         <span className="relative min-w-full min-h-full">
           <span className="fixed top-10 right-10 bg-neutral-500 rounded-full w-2 h-2"></span>
           <span className="fixed top-20 right-10 bg-neutral-500 rounded-full w-4 h-4"></span>
@@ -34,8 +38,4 @@ export default function Background(){
         <span className="fixed !rotate-45 top-64 left-[74%] -z-30 w-1 h-1 bg-white animate-pulse-star"></span>
       <span className="fixed -z-10 animate-heigh-size-up bottom-52 left-0 w-[200%] h-60 bg-gradient-to-t from-blue-400 via-15% via-blue-900 to-blue-950 blur"></span>
       <span className="fixed -z-20 animate-pulse-short bottom-0 left-0 w-[200%] h-52 bg-gradient-to-t from-stone-900 to-stone-700 blur"></span>
-    </>
-    
-        )
-
-}
+*/

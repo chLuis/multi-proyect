@@ -12,6 +12,8 @@ import ToPortfolio from './components/ToPorfolio.jsx';
 import FormationPage from './routes/formation.tsx';
 import TestWsp from './routes/testwsp.jsx';
 import DesingPage from './routes/design.tsx';
+import { Footer } from './components/Footer.jsx';
+import ConversationPage from './routes/conversation.tsx';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: '/wspFake',
     element: <TestWsp />
+  },
+  {
+    path: '/transcription',
+    element: <ConversationPage />
   }
 ])
 
@@ -54,5 +60,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     <ToPortfolio />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>,
 )

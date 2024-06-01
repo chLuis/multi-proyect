@@ -47,7 +47,7 @@ export default function ToDo({dataLoad}) {
     }
 
     return (
-        <div className="min-w-0 w-full max-w-[900px] px-4">
+        <div className="min-w-0 w-full max-w-[900px] px-4 pb-8">
             <label className="relative">
                 <span className="absolute -inset-y-1 border-b border-orange-400 h-6 left-2 text-neutral-500 text-nowrap">
                     task:

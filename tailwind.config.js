@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'cormorant': ['"Cormorant Garamond"', 'serif'],
+      },
       screens: {
         'xs' : '380px'
       },
@@ -17,6 +20,8 @@ export default {
         'width' : 'widthshow 0.3s ease-in-out',
         'spin-long': 'spinner 30s linear infinite',
         'heigh-size-up': 'grow 20s linear infinite',
+        'comeFromRight': 'comeRight 0.2s linear',
+        'comeFromBottom': 'comeBottom 0.2s linear',
       },
       keyframes: {
         fade: {
@@ -48,7 +53,15 @@ export default {
           '50%': { transform: 'scale(0.6) translate(4px, -2px)', opacity: 1, filter: 'blur(1px)'},
           '65%' : {filter: 'blur(2px)'},
           '100%': { transform: 'scale(0.3) translate(1px, 1px)', opacity: 0.5, filter: 'blur(4px)'},
-        }
+        },
+        comeRight: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        comeBottom: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
       }
     },
   },

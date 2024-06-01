@@ -32,14 +32,14 @@ export default function FetchWeather() {
     },[])
     
     return (
-        <div className="flex flex-col justify-center items-center w-full">
+        <div className="flex flex-col items-center w-full pt-6 pb-8 min-h-screen">
             <h2 className="text-4xl mb-4 font-semibold">WEATHER API</h2>
             <h4 className="mb-1">Insert a location</h4>
             <div className="flex gap-2 justify-center items-center mb-8">
                 <input value={location} onChange={(e) => setLocation(e.target.value)} onKeyDown={(e) => handleKeyDown(e)} className="rounded py-1 px-2 bg-neutral-950 bg-opacity-85" placeholder="ex: Paris, Buenos Aires..."/>
                 <button onClick={() => getWeather(location)} className="border rounded px-2 bg-orange-500 hover:bg-orange-800 duration-200 ">Search</button>
             </div>
-            {weather && <div className="relative flex flex-col justify-between gap-1 items-center w-80 h-[350px] border rounded py-2 px-2 animate-pulse-short">
+            {weather && <div className="relative flex flex-col justify-between gap-1 items-center w-80 h-[350px] border rounded py-2 px-2 hover:border hover:border-orange-500 duration-200 animate-pulse-short">
                 <div className="absolute inset-0 w-full h-full bg-black opacity-45 -z-10 blur-md"></div>
                 {weather?.error && <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-black z-10">
                     <div>{weather.error.message}</div>

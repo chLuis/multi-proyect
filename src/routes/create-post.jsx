@@ -96,7 +96,7 @@ export default function CreatePostPage() {
 
 
     return (
-        <div className="flex flex-col items-center animate-pulse-veryshort">
+        <div className="flex flex-col items-center animate-pulse-veryshort pb-8 min-h-screen">
             <Background />
             <TitleProyect title={"Create Post"} />
             <div className="z-50 fixed flex flex-col gap-3 top-6 left-2 text-lg">
@@ -144,7 +144,7 @@ export default function CreatePostPage() {
                 {filterBy === "Sports" && <div className="flex gap-2"><span className="underline">Filter by Sports</span></div>}
                 {filterBy === "History" && <div className="flex gap-2"><span className="underline">Filter by History</span></div>}
                 {filterBy === "Movies" && <div className="flex gap-2"><span className="underline">Filter by Movies</span></div>}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mx-2 order">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 mx-2 order">
                 {[...post].reverse().map((item, index) => 
                     filterBy === "All" 
                         ? <div key={index} className={`relative`}>

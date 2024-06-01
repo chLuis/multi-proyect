@@ -149,7 +149,7 @@ export default function DragAndDropPage() {
         <div
             onDragOver={handleOverAll}
             onDrop={handleDropALL}
-            className="mx-6 animate-pulse-veryshort"
+            className="mx-6 animate-pulse-veryshort min-h-screen"
         >
             <Background />
             <TitleProyect title={"Drag and Drop"} />
